@@ -1,5 +1,5 @@
 # Progressive Web Apps - What are they and why should you care?
-<img src='images/dug.jpeg' style="float: left; margin: 0 20px 20px 0;">
+<img src='images/dug.jpeg' align="left" style="float: left; margin: 0 20px 20px 0;">
 
 This presentation was for the [Developer User Group on 13 Feb 2018](https://www.meetup.com/DeveloperUG/events/zgjmnlyxdbrb/). 
 
