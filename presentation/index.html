@@ -48,6 +48,61 @@
 			border: 0 !important;
 			box-shadow: none !important;
 		}
+
+		div.rotate {
+			width: 200vw;
+			position: relative;
+			left: 50%;
+			right: 50%;
+			margin-left: -100vw;
+			margin-right: -100vw;
+
+			transform: rotate(35deg) translate(100px);
+
+		}
+
+		.one,
+		.two,
+		.three {
+			color: white !important;
+			padding: 0.3em !important;
+		}
+
+		.one {
+			background-color: rgb(200, 0, 0);
+		}
+
+		.two {
+			background-color: rgb(150, 150, 150);
+		}
+
+		.three {
+			background-color: rgb(50, 50, 60);
+		}
+
+		.leftish {
+			position: relative;
+			left: -5em;
+			margin-left: 10em;
+			;
+		}
+
+		#bbd,
+		#gde,
+		#jozijs,
+		#docker {
+			width: 30vw;
+		}
+
+		#compiling {
+			position: absolute;
+			right: 20vw;
+			bottom: -6vw;
+		}
+
+		.browser {
+			height: 5em;
+		}
 	</style>
 </head>
 
@@ -55,18 +110,31 @@
 	<div class="reveal">
 		<div class="slides">
 			<section>
-				<h3>Progressive Web Apps</h3>
-				<h2>
-					What are they, and
-					<br/> Why should you care?</h2>
+				<div class="rotate">
+					<h4 class="one">Progressive Web Apps</h4>
+					<h3 class="two">What are they, and</h3>
+					<h3 class="three">Why should you care?</h3>
+				</div>
 				<br/>
-				<h4>@mikegeyser</h4>
-				<h4>13 Feb 2018</h4>
-
+				<div class="leftish">
+					<h4>@mikegeyser</h4>
+					<h4>13 Feb 2018</h4>
+				</div>
 			</section>
-			<section>Introduction</section>
 			<section>
-				Agenda?
+				<section>
+					<img id="bbd" src="images/bbd.png" alt="">
+					<img id="compiling" src="images/compiling.png" alt="" class="fragment">
+				</section>
+				<section>
+					<img id="gde" src="images/gde-badge.png" alt="">
+				</section>
+				<section>
+					<img id="jozijs" src="images/jozijs.png" alt="">
+				</section>
+				<section>
+					<img id="docker" src="images/docker.png" alt="">
+				</section>
 			</section>
 			<section>
 				<section>
@@ -115,8 +183,12 @@
 				</section>
 				<section>
 					<p>What needs to be on screen immediately?</p>
-					<p class="fragment">What other UI components are key to our app?</p>
-					<p class="fragment">What supporting resources are needed?</p>
+					<p>What other UI components are key to our app?</p>
+					<p>What supporting resources are needed?</p>
+				</section>
+				<section>
+					<p>Chrome vs. content</p>
+					<p>Performance optimisation</p>
 				</section>
 			</section>
 
@@ -132,11 +204,11 @@
 					<p>Just JavaScript</p>
 				</section>
 				<section>
-					<img src="images/ss-cache-then-network.png" alt="">
+					<img src="images/ss-cache-then-network.png">
 				</section>
 				<section>
-					<p class="fragment">Reduce network traffic</p>
-					<p class="fragment">Offline fallback</p>
+					<p>Reduce network traffic</p>
+					<p>Offline <del>fallback</del> first</p>
 				</section>
 			</section>
 
@@ -171,7 +243,7 @@
 					<p>'Jankiness'</p>
 				</section>
 				<section>
-					<img src="images/material-design.gif" alt="">
+					<img src="images/material-design.gif">
 				</section>
 			</section>
 
@@ -219,6 +291,7 @@
 					<br/>
 					<br/>
 					<h2 class="fragment">
+						Budget:
 						<span class="fragment highlight-red"> ± 170kb </span>
 					</h2>
 				</section>
@@ -231,18 +304,188 @@
 				<section>
 					<ul>
 						<li>
-							<strong>Push </strong>critical resources.</li>
+							<strong>Push </strong>critical resources.
+							<br />
+							<em class="fragment">- HTTP/2, or link rel="preload"</em>
+						</li>
+
 						<li>
-							<strong>Render</strong> initial route.</li>
+							<strong>Render</strong> initial route.
+							<br />
+							<em class="fragment">- Minimal AppShell</em>
+						</li>
 						<li>
-							<strong>Pre-cache</strong> remaining routes.</li>
+							<strong>Pre-cache</strong> remaining routes.
+							<br />
+							<em class="fragment">- Precache using Service Worker</em>
+						</li>
 						<li>
-							<strong>Lazy-load</strong> on demand. </li>
+							<strong>Lazy-load</strong> on demand.
+							<br />
+							<em class="fragment">- Code splitting</em>
+						</li>
 					</ul>
 				</section>
 				<section>
 					<img src="images/prpl.png" alt="">
 				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Why should I care?</h2>
+				</section>
+				<section>
+					<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="600" height="600"
+					 style="font-size: 1em;">
+						<ellipse cx="33.33333333333333%" cy="50%" rx="27.857142857142858%" ry="27.857142857142858%" fill="rgba(204, 41, 114, 0.3)"
+						 style="stroke: rgb(102, 20, 57); stroke-opacity: 0.5;"></ellipse>
+						<ellipse cx="66.66666666666667%" cy="50%" rx="27.857142857142858%" ry="27.857142857142858%" fill="rgba(103, 112, 140, 0.3)"
+						 style="stroke: rgb(51, 56, 70); stroke-opacity: 0.5;"></ellipse>
+						<text y="50%" text-anchor="middle" id="1:77%">
+							<tspan x="77%" dy="0">Web</tspan>
+						</text>
+						<text y="50%" text-anchor="middle" id="2:23%">
+							<tspan x="23%" dy="0">Mobile</tspan>
+						</text>
+						<text y="50%" text-anchor="middle" id="12:50%">
+							<tspan x="50%" dy="0">PWA</tspan>
+						</text>
+					</svg>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Mobile</h2>
+				</section>
+				<section>
+					<p>± 5 Billion Devices Connected to the Web</p>
+					<p>(More mobile than desktop)</p>
+				</section>
+				<section>
+					<p>13% of time on mobile is on web, 87% on native apps.</p>
+					<p class="fragment">Use about 10 apps per day</p>
+					<p class="fragment">80% of time is spent in 3 apps</p>
+					<p class="fragment">On average, a user installs ZERO new apps per month</p>
+					<p class="fragment">Average app size is ±15mb Android and ± 38mb iOS</p>
+				</section>
+				<section>
+					<h2>The future is mobile.</h2>
+					<h4>(but the audience is picky)</h4>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Web</h2>
+				</section>
+				<section>
+					<p>90% of sites are sending ~1mb gzipped JS</p>
+					<p class="fragment">(~ 4mb, 4s on parse and compile)</p>
+					<p class="fragment">40% of JS downloaded is unused</p>
+				</section>
+				<section>
+					<p>Average 35s TTI on mobile</p>
+					<p class="fragment">After 3s, 20% of users abandon the session</p>
+				</section>
+				<section>
+					<h2>Wasteful and lazy!</h2>
+					<h4>(and it's hurting us badly)</h4>
+				</section>
+			</section>
+			<section>
+				<section>
+					<img src="images/rsa.png" alt="">
+				</section>
+				<section>
+					<h3>Number of internet users</h3>
+					<p>±4 billion globally</p>
+					<p class="fragment">±400m in Africa</p>
+					<p class="fragment">±30m in South Africa</p>
+				</section>
+				<section>
+					<h3>Web Penetration</h3>
+					<p>±52% globally</p>
+					<p class="fragment">±31% in Africa</p>
+					<p class="fragment">±54% in South Africa</p>
+				</section>
+				<section>
+					<h3>Mobile in Sub-Saharan Africa:</h3>
+					<h4>(2016 -> 2020)</h4>
+					<p class="fragment">420m -> 535m unique mobile subscribers</p>
+					<p class="fragment">200m -> 500m smart phones</p>
+					<p class="fragment">26% -> 38% mobile web</p>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Is it ready?</h2>
+				</section>
+				<section>
+					<img src="images/chrome.jpeg" class="browser">
+				</section>
+				<section>
+					<img src="images/firefox.png" class="browser">
+				</section>
+				<section>
+					<img src="images/edge.png" class="browser">
+				</section>
+				<section>
+					<img src="images/safari.png" class="browser">
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<h2>Summary</h2>
+				</section>
+				<section>
+					<h3>No clear definition of a PWA</h3>
+					<br>
+					<p>(More a spectrum. Kinda like REST.)</p>
+				</section>
+				<section>
+					<h3>Installation is a gimmick</h3>
+					<br>
+					<p>(There, I said it...)</p>
+				</section>
+				<section>
+					<h3>Native mobile is here to stay</h3>
+					<br>
+					<p>(Hybrid mobile is gone.)</p>
+				</section>
+				<section>
+					<h3>Web performance sucks</h3>
+					<br>
+					<p>(Change, or be left behind.)</p>
+				</section>
+				<section>
+					<h3>This is a thing</h3>
+					<br>
+					<p>(Or thats what Google, Apple, Microsoft and Mozilla think...)</p>
+				</section>
+				<section>
+					<h3>Examples</h3>
+					<ul>
+						<li>
+							<a href="https://mobile.twitter.com">Twitter lite</a>
+						</li>
+						<li>
+							<a href="https://www.google.com/maps?force=pwa">Google Maps Go</a>
+						</li>
+						<li>
+							<a href="https://code.nasa.gov">NASA Code</a>
+						</li>
+						<li>
+							<a href="https://hnpwa.com/">HNPWA</a>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<h2>Questions?</h2>
+				<br>
+				<p>@mikegeyser</p>
+				<p>mike@bbd.co.za</p>
+				<p>zatech.co.za</p>
 			</section>
 		</div>
 	</div>

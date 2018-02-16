@@ -19,14 +19,18 @@ Mike Geyser is a Google Developer Expert in Web Technologies, working in the R&D
     - Definition
         - Coined in 2015 - Frances Berriman and Alex Russell
         -  "apps taking advantage of new features supported by modern browsers [...] that let users upgrade web apps to progressive web applications in their native operating system"
+        https://developers.google.com/web/progressive-web-apps/
+
             - Reliable 
                 - Load instantly and never show the downasaur, even in uncertain network conditions.
             - Fast 
                 - Respond quickly to user interactions with silky smooth animations and no janky scrolling.
             - Engaging 
                 - Feel like a natural app on the device, with an immersive user experience.
+                
         - Characteristics:
             - https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/
+        
             - Progressive 
                 - Work for every user, regardless of browser choice because they’re built with progressive enhancement as a core tenet.
             - Responsive 
@@ -89,12 +93,25 @@ Mike Geyser is a Google Developer Expert in Web Technologies, working in the R&D
 
 - Why should we care about PWAs
     - Mobile App Usage statistics
+        - ± 5 Billion Devices Connected to the Web
+        - More mobile than desktop
+        - 13% of time on mobile is on web, 87% on native apps.
+        - 80% of time is spent in 3 apps.
+        - The average user installs zero new apps per month.
+        - https://techcrunch.com/2017/05/04/report-smartphone-owners-are-using-9-apps-per-day-30-per-month/
+        - https://www.comscore.com/Insights/Presentations-and-Whitepapers/2017/The-2017-US-Mobile-App-Report
+        - http://www.businessofapps.com/data/app-statistics/
+        - https://sweetpricing.com/blog/2017/02/average-app-file-size/
+    
     - Web app performance statistics
         - http://beta.httparchive.org/reports/page-weight#bytesJs
         - 40% of JavaScript downloaded is unused.
         - 90% of sites are sending ~1mb gzipped js (~ 4mb, 4s on parse and compile)
         - 35s time to interactive
+        - After 3s, 20% of users abandon the session        
+        
     - Mobile growth in Africa
+        -- http://www.internetworldstats.com/stats.htm
     - Connectivity in South Africa
         - http://www.internetlivestats.com/internet-users-by-country/
         - https://www.gsma.com/mobileeconomy/sub-saharan-africa-2017/
@@ -139,4 +156,6 @@ Production Progressive Web Apps With JavaScript Frameworks (Google I/O '17) http
 https://jakearchibald.github.io/isserviceworkerready/
 
 https://infrequently.org/2017/10/can-you-afford-it-real-world-web-performance-budgets/
+
+Progressive Web Apps: What, Why, and How? https://www.youtube.com/watch?v=eodArdGRIVQ
 
