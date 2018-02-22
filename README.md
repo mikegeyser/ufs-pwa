@@ -1,9 +1,4 @@
 # Progressive Web Apps - What are they and why should you care?
-<img src='images/dug.jpeg' align="left" style="float: left; margin: 0 20px 20px 0;">
-
-This presentation was for the [Developer User Group on 13 Feb 2018](https://www.meetup.com/DeveloperUG/events/zgjmnlyxdbrb/). 
-
-[A recording of the talk can be viewed here](https://www.youtube.com/watch?v=T-E8mOY0UhE)
 
 The hype is real. 
 
