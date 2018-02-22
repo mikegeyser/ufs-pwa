@@ -9,6 +9,7 @@
 
 	<link rel="stylesheet" href="css/reveal.css">
 	<link rel="stylesheet" href="css/theme/simple.css">
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 
 	<!-- Theme used for syntax highlighting of code -->
 	<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -57,8 +58,9 @@
 			margin-left: -100vw;
 			margin-right: -100vw;
 
-			transform: rotate(35deg) translate(100px);
+			transform: rotate(-15deg) translate(0px, 100px);
 
+			font-size: 0.75em !important;
 		}
 
 		.one,
@@ -73,7 +75,8 @@
 		}
 
 		.two {
-			background-color: rgb(150, 150, 150);
+			font-family: 'Lato', sans-serif !important;
+			color: black !important;
 		}
 
 		.three {
@@ -85,6 +88,13 @@
 			left: -5em;
 			margin-left: 10em;
 			;
+		}
+		
+		.rightish {
+			position: relative;
+			right: -5em;
+			bottom: -4em;
+			margin-right: 10em;
 		}
 
 		#bbd,
@@ -103,6 +113,15 @@
 		.browser {
 			height: 5em;
 		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			font-family: 'Pacifico', cursive !important;
+		}
 	</style>
 </head>
 
@@ -111,14 +130,13 @@
 		<div class="slides">
 			<section>
 				<div class="rotate">
-					<h4 class="one">Progressive Web Apps</h4>
-					<h3 class="two">What are they, and</h3>
-					<h3 class="three">Why should you care?</h3>
+					<h2 class="one">Progressive Web Apps</h2>
+					<h4 >What are they, and why should you care?</h4>
 				</div>
 				<br/>
-				<div class="leftish">
+				<div class="rightish">
 					<h4>@mikegeyser</h4>
-					<h4>13 Feb 2018</h4>
+					<h4>22 Feb 2018</h4>
 				</div>
 			</section>
 			<section>
@@ -208,7 +226,8 @@
 				</section>
 				<section>
 					<p>Reduce network traffic</p>
-					<p>Offline <del>fallback</del> first</p>
+					<p>Offline
+						<del>fallback</del> first</p>
 				</section>
 			</section>
 
